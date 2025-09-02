@@ -20,19 +20,20 @@ For a string containing parentheses (), curly braces {}, and square brackets [],
   - In these cases, the standard approach is to ignore any characters that are not brackets.
   - A string consisting of only alphabets, or a combination of alphabets and valid brackets, would still be considered valid as long as the brackets themselves are valid (e.g., abc{def[ghi]jkl} is valid, and abc alone is also valid).
 
-## The Solution
+## The Solution ✅
 
 - My solution considers Alphabets, parentheses and empty strings to be valid and implements:
-  - `The Stack (public)` - It's a class that has uses a private Array to implement the stack. The choice of privacy is to prevent external modification of the stack.
+  - 📚 `The Stack (public)` - It's a class that has uses a private Array to implement the stack. The choice of privacy is to prevent external modification of the stack.
     - It implements public stack methods: `pop`, `print` and `push` as well as getter attributes: `peek`, `len`, and `values`.
     - Each attribute is well documented so you can read the class for details of each attribute.
-  - `The Function (public)` - The `validateParentheses` function is the one who uses the stack to validate the string.
+  - 👨🏾‍💻 `The Function (public)` - The `validateParentheses` function is the one who uses the stack to validate the string.
     - It expects an argument of type `string` and throws an error if another data type is passed to it.
     - Returns `true` or `false` as per validity of arg passed.
-  - `The TestSuite (public)` - This is a _class_ that handles testing. It implements only one method `run` that takes a suite of testacases and executes them, printing results to the console, and returns `true` _iff_ all tests pass.
+  - 🦫 `The TestSuite (public)` - This is a _class_ that handles testing. It implements only one method `run` that takes a suite of testacases and executes them, printing results to the console, and returns `true` _iff_ all tests pass.
     - It's just a simple solution for this problem only. More extensive tests can be done with standard testing libraries like `Mocha` or `Jest`.
-  - `isAlpha (public)` - A function that takes a string and validates if the first character is an alphabet. It expects a single character and so it uses only the first char.
-  - `getDidits`: - A function that tells the number of digits in the number passed as an argument. It expects a number and throws an error if another type is passed.
+  - 🔠 `isAlpha (public)` - A function that takes a string and validates if the first character is an alphabet. It expects a single character and so it uses only the first char.
+  - #️⃣ `getDidits`: - A function that tells the number of digits in the number passed as an argument. It expects a number and throws an error if another type is passed.
+    - 🔥 You might be wondering why this yea 🤔 ? Well, it's the function I use to determine how to pad the result for each test case so it's neatly formatted in the console. Now give me some thanks ☕️ for helpig you out!
 - A suite of tests are defined but not exposed. On entry, they are executed and results printed. The tests are private and hence, are not accessible outside the module.
 - The `stack`, `validator function` and `test suite` are public should anyone want to re-use or test them as they like.
 
@@ -43,3 +44,28 @@ Written in vanilla Javascript
 ## Finally
 
 Any comments? Send me a message on [X](https://x.com/williamInyam) or [email](mailto:sw.inyam@outlook.com)
+
+                       010+
+                  0101010+010101
+                0101010+0101010+010
+              0101010+0101010+010101
+              01010+0101010+0101010+0
+              010+0101010+0101010+010
+              0+0101010 0101 10+01010
+              0101010+0101010+0101010
+               1010+0101010+0101010+0
+              010+0101010+0101010+0101
+              0+0101010+0101010+010101
+              0101010+0101010+0101010+
+               1010+0101010+0101010+
+                0+0101010+0101010+0
+                 101010+0101010+010
+                 1010+0101010+0101
+                  0+0101010+01010
+                 +0101010+0101010
+               +0101010+0101010+01
+          010+0101010+0101010+0101010+
+     101010+0101010+0101010+0101010+0101010
+
+0+0101010+0101010+0101010+0101010+0101010+010101
+0101010+0101010+0101010+0101010+0101010+0101010+01
